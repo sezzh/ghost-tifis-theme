@@ -7,11 +7,18 @@
   <title>{{meta_title}}</title>
   <meta name="description" content="{{meta_descriptions}}">
   <meta name="HandheldFriendly" content="True">
+  <link rel="stylesheet" href="{{asset "css/screen.css"}}">
+  <link rel="stylesheet" href="{{asset "css/prism.css"}}">
   {{ghost_head}}
 </head>
 <body>
   <div class="site-wrapper">
-    {{body}}
+    {{> "header" }}
+    {{{body}}}
+    {{> "footer" }}
+    {{ghost_footer}}
   </div>
+  <script type="text/javascript" src="{{asset "js/app.bundle.js"}}"></script>
+  <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
 </body>
 </html>
