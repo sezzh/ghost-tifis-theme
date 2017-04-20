@@ -1,0 +1,20 @@
+<div class="sf-grid__cell sf-grid__cell--col-6">
+  <nav class="pagination" role="navigation">
+    <div class="sf-grid sf-grid--gutter">
+      <div class="sf-grid__cell sf-grid__cell--col-auto">
+        {{#if prev}}
+        <a class="newer-posts  sezzh-post-nav  sezzh-post-nav--newer" href="{{page_url prev}}">
+          Newer Posts
+        </a>
+        {{/if}}
+      </div>
+      <div class="sf-grid__cell sf-grid__cell--col-auto">
+        {{#if next}}
+        <a class="older-posts  sezzh-post-nav  sezzh-post-nav--older" href="{{page_url next}}">
+          Older Posts
+        </a>
+        {{/if}}
+      </div>
+    </div>
+  </nav>
+</div>

@@ -1,0 +1,10 @@
+<nav class="sezzh-nav  sezzh-nav--fixed  u--m-header sezzh-nav--closed">
+  {{#foreach navigation}}
+    <a class="
+      sezzh-nav__item
+      {{#if current}}sezzh-nav__item--selected{{/if}}"
+      href="{{url absolute="true"}}">
+      {{label}}
+    </a>
+  {{/foreach}}
+</nav>

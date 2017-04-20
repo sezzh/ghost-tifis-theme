@@ -1,0 +1,36 @@
+.sezzh-nav
+  background-color: $gray-242
+  display: flex
+  flex-flow: column
+  flex-wrap: wrap
+  font-family: $font-nav
+  padding: 0 1rem
+  width: calc(100% - 2rem)
+  transform: translate(0%)
+  &--closed
+    transform: translate(-100%)
+  &--fixed
+    bottom: 0
+    left: 0
+    position: fixed
+    right: 0
+    top: 0
+  &__item
+    color: $primary-dark-color
+    display: block
+    font-size: rem-calc(24)
+    margin-bottom: rem-calc(12)
+    text-decoration: none
+    &--selected
+      color: $primary-light-color
+
+.sezzh-post-nav
+  color: $gray-77
+  display: block
+  font-family: $font-main
+  text-decoration: none
+  width: 100%
+  &--older
+    text-align: right
+  &--newer
+    text-align: left

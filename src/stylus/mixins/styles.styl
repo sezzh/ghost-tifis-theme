@@ -1,0 +1,6 @@
+rem-calc(value)
+  $u = unit(value)
+  if ($u is 'rem')
+    return unit(value, $u)
+  else
+    return unit(value / $font-html-base-size, 'rem')
