@@ -1,3 +1,133 @@
+.sezzh-post
+  width: 100%
+  &__wrapper-title
+    width: 100%
+    &__title
+      line-height: rem-calc(27)
+      margin: 0
+      margin-bottom: .5rem
+      &__link
+        color: $gray-26
+        font-size: rem-calc(22)
+        text-decoration: none
+  &__wrapper-metrics
+    width: 100%
+    &__date
+      color: $gray-77
+      display: block
+      font-family: $font-main-thin
+      font-size rem-calc(16)
+      margin-bottom: rem-calc(8)
+      width: 100%
+    &__tags
+      color: $gray-153
+      display: block
+      font-family: $font-main-thin
+      font-size: rem-calc(14)
+      margin-bottom: rem-calc(8)
+      text-transform: uppercase
+      text-align: center
+      > a
+        color: $gray-153
+        text-decoration: none
+
+  &__article
+    color: $gray-51
+    font-size: rem-calc(16)
+    margin-top: - rem-calc(16)
+    overflow: hidden
+    width: 100%
+    & blockquote
+      color: $gray-128
+      font-family: $font-main-thin
+      font-size: rem-calc(20)
+      font-style: italic
+      margin: rem-calc(16)
+    & h1, h2, h3
+      display: block
+      width: 100%
+    & h1
+      font-size: rem-calc(20)
+    & h2
+      font-size: rem-calc(18)
+    & h3
+      font-size: rem-calc(16)
+    & a
+      color: $gray-128
+      &:visited
+        color: $gray-153
+    & p img, img
+      display: block
+      width: 100%
+    & p, ul li, ol, li
+      line-height: rem-calc(23)
+    & mark
+      background-color: $base-blue-light-color
+    & pre
+      background-color: rgba(245, 242, 240, 1) !important
+      display: block
+      font-family: $font-main-mono, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important
+      margin: 0
+      overflow-x: auto
+      padding: 1rem !important
+      width: calc( 100% - 2rem)
+      & code
+        display: block
+        font-family: $font-main-mono, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important
+        font-size: rem-calc(16)
+        max-width: 0
+        width: 100%
+
+  &__author
+    width: 100%
+    &__title
+      width: 100%
+      > a
+        color: $gray-153
+        display: block
+        font-family: $font-main-bold
+        font-size: rem-calc(16)
+        text-align: right
+        text-decoration: none
+        width: 100%
+
+  &__share
+    width: 100%
+    &__title
+      color: $gray-51
+    &__btn
+      background-color: rgba(200, 200, 200, 1)
+      border-radius: 50%
+      display: inline-block
+      height: rem-calc(25)
+      line-height: rem-calc(40)
+      margin-right: 1rem
+      padding: .5rem
+      text-align: center
+      text-decoration: none
+      vertical-align: middle
+      width: rem-calc(25)
+      &:last-child
+        margin-right: 0
+      > i
+        color: $gray-102
+        font-size: rem-calc(24)
+  &__nav
+    width: 100%
+    &__next
+      color: $gray-153
+      display: block
+      text-align: center
+      text-decoration: none
+      width: 100%
+    &__preview
+      color: $gray-153
+      display: block
+      text-align: center
+      text-decoration: none
+      width: 100%
+
+
 .sezzh-post-item
   display: block
   margin: 0
@@ -30,3 +160,18 @@
       font-size: rem-calc(16)
       text-align: right
       width: 100%
+
+// This helper is used to make embed stuff fluid
+.svp
+  height: 0
+  overflow: hidden
+  padding-bottom: 56.25%
+  padding-top: 0
+  position: relative
+  width: 100%
+  & iframe, object, embed
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width:100%

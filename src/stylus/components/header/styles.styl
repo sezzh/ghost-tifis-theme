@@ -1,17 +1,17 @@
 .sezzh-header
   align-items: stretch
-  background-color: $gray-242
+  background-color: rgba(242, 242, 242, .8) // $gray-242
   display: flex
   flex-wrap: nowrap
   height: rem-calc($header-mobile-size)
   padding: 0 rem-calc(16)
-  position: fixed
   width: calc(100% - 2rem)
   &--fixed
     left: 0
     position: fixed
     right: 0
     top: 0
+    z-index: 10
   &__net-wrapper
     align-items: center
     display: flex
