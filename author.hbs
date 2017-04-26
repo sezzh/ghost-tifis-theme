@@ -1,0 +1,21 @@
+{{!< default}}
+
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+<main class="site-main  u--m-header" role="main">
+
+  <div class="u--m-bottom">
+    <div class="sf-grid sf-grid--gutter">
+      {{> "author-body"}}
+    </div>
+  </div>
+
+  <div class="sf-grid sf-grid--gutter">
+    {{> "loop"}}
+  </div>
+  {{!-- Previous/next page links - displayed on every page --}}
+  <div class="sf-grid sf-grid--gutter sf-grid--fluid sf-grid--just-center u--m-bottom">
+    {{pagination}}
+  </div>
+
+</main>
