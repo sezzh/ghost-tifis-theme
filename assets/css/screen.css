@@ -1794,6 +1794,8 @@ body {
 }
 .sezzh-author-detail__wrapper-bio__bio__name {
   color: #1a1a1a;
+  font-size: 1.375rem;
+  margin: 1rem 0;
   text-align: center;
   width: 100%;
 }
@@ -1838,6 +1840,21 @@ body {
   font-size: 1.5rem;
   text-align: center;
   text-decoration: none;
+  width: 100%;
+}
+.sezzh-tag-details {
+  width: 100%;
+}
+.sezzh-tag-details__title {
+  color: #1a1a1a;
+  font-size: 1.375rem;
+  margin: 1rem 0;
+  text-align: center;
+  width: 100%;
+}
+.sezzh-tag-details__description {
+  line-height: 1.4375rem;
+  text-align: center;
   width: 100%;
 }
 .u--m-bottom {
