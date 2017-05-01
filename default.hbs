@@ -15,6 +15,7 @@
   <link rel="shortcut icon"
     href="{{asset "images/favicon.png"}}"
     type="image/png">
+  <link rel="stylesheet" href="{{asset "css/vendor.css"}}">
   <link rel="stylesheet" href="{{asset "css/screen.css"}}">
   <link rel="stylesheet" href="{{asset "css/prism.css"}}">
 
@@ -28,7 +29,12 @@
     {{!> "footer" }}
     {{ghost_footer}}
   </div>
-  <script type="text/javascript" src="{{asset "js/app.bundle.js"}}"></script>
   <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
+  <script type="text/javascript" src="{{asset "js/manifest.bundle.js"}}">
+  </script>
+  <script type="text/javascript" src="{{asset "js/vendor.bundle.js"}}">
+  </script>
+  <script type="text/javascript" src="{{asset "js/main.bundle.js"}}">
+  </script>
 </body>
 </html>
