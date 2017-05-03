@@ -9,8 +9,10 @@ class SiteComponent {
 
   events (event) {
     if (event.target.getAttribute('data-sezzh-comp') === 'logo-menu') {
+      this.header.rotateMenu()
       this.nav.handleOpening()
       this.header.paintHeader()
+      this.header.paintNetIcons()
     }
   }
 }

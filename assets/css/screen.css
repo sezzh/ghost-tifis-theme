@@ -1365,6 +1365,16 @@ body {
 .sezzh-networking-icon {
   color: #666;
   font-size: 1.125rem;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: color;
+  -moz-transition-property: color;
+  -o-transition-property: color;
+  -ms-transition-property: color;
+  transition-property: color;
 }
 @media only screen and (min-width: 27.5rem) {
   .sezzh-networking-icon {
@@ -1442,6 +1452,29 @@ body {
     height: 5rem;
   }
 }
+@font-face {
+  font-family: 'sezzhlogo';
+  src: url("../fonts/sezzhlogo/sezzhlogo.eot?swtkac");
+  src: url("../fonts/sezzhlogo/sezzhlogo.eot?swtkac#iefix") format('embedded-opentype'), url("../fonts/sezzhlogo/sezzhlogo.ttf?swtkac") format('truetype'), url("../fonts/sezzhlogo/sezzhlogo.woff?swtkac") format('woff'), url("../fonts/sezzhlogo/sezzhlogo.svg?swtkac#sezzhlogo") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="logo-"],
+[class*=" logo-"] {
+  font-family: 'sezzhlogo' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+/* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.logo-sezzh:before {
+  content: "\e900";
+}
 .sezzh-logo {
   -webkit-box-align: center;
   -moz-box-align: center;
@@ -1455,6 +1488,7 @@ body {
   display: -ms-flexbox;
   display: box;
   display: flex;
+  text-decoration: none;
   width: 2.75rem;
 }
 @media only screen and (min-width: 27.5rem) {
@@ -1463,7 +1497,24 @@ body {
   }
 }
 .sezzh-logo__img {
+  color: #333;
+  font-size: 2.75rem;
   max-width: 100%;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: -webkit-transform, color;
+  -moz-transition-property: -moz-transform, color;
+  -o-transition-property: -o-transform, color;
+  -ms-transition-property: -ms-transform, color;
+  transition-property: transform, color;
+}
+@media only screen and (min-width: 27.5rem) {
+  .sezzh-logo__img {
+    font-size: 4rem;
+  }
 }
 .sezzh-logo__wrapper {
   left: 0.5rem;
@@ -1920,6 +1971,14 @@ body {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
+}
+.u--a-rotate-logo {
+  -webkit-transform: rotate(-360deg);
+  -moz-transform: rotate(-360deg);
+  -o-transform: rotate(-360deg);
+  -ms-transform: rotate(-360deg);
+  transform: rotate(-360deg);
+  color: #ddc349;
 }
 .cb {
   background-color: #00f;

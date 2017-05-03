@@ -1,4 +1,7 @@
-let ANIMATION_END = 'webkitAnimationEnd mozAnimationEnd ' +
+let CONFIG_APP = {
+  ANIMATION_END: 'webkitAnimationEnd mozAnimationEnd ' +
   'MSAnimationEnd oanimationend animationend'
+}
 
-module.exports.ANIMATION_END = ANIMATION_END
+
+module.exports = CONFIG_APP

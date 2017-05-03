@@ -8,11 +8,11 @@ webpackJsonp([0],[
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _headerComponent = __webpack_require__(3);
+var _headerComponent = __webpack_require__(4);
 
 var _headerComponent2 = _interopRequireDefault(_headerComponent);
 
-var _navComponent = __webpack_require__(5);
+var _navComponent = __webpack_require__(6);
 
 var _navComponent2 = _interopRequireDefault(_navComponent);
 
@@ -32,8 +32,10 @@ var SiteComponent = function () {
     key: 'events',
     value: function events(event) {
       if (event.target.getAttribute('data-sezzh-comp') === 'logo-menu') {
+        this.header.rotateMenu();
         this.nav.handleOpening();
         this.header.paintHeader();
+        this.header.paintNetIcons();
       }
     }
   }]);
@@ -53,6 +55,19 @@ module.exports = function () {
 "use strict";
 
 
+var CONFIG_APP = {
+  ANIMATION_END: 'webkitAnimationEnd mozAnimationEnd ' + 'MSAnimationEnd oanimationend animationend'
+};
+
+module.exports = CONFIG_APP;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -63,6 +78,10 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
+var _config = __webpack_require__(3);
+
+var _config2 = _interopRequireDefault(_config);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -71,8 +90,11 @@ var HeaderComponent = function () {
   function HeaderComponent(dadComponent) {
     _classCallCheck(this, HeaderComponent);
 
+    this.paintClass = 'u--font-primary-dark-color';
+    this.rotateClass = 'u--a-rotate-logo';
     this._mainComponent = (0, _jquery2.default)('[data-sezzh-comp="header"]');
     this._logoComponent = (0, _jquery2.default)('[data-sezzh-comp="logo-menu"]');
+    this._networkingIcons = (0, _jquery2.default)('[data-sezzh-comp="net-icon"]');
     this._logoComponent.on('click', this.handleClick.bind(this));
     this.dadComponent = dadComponent;
   }
@@ -89,6 +111,20 @@ var HeaderComponent = function () {
     value: function paintHeader() {
       this._mainComponent.toggleClass('sezzh-header--solid');
     }
+  }, {
+    key: 'paintNetIcons',
+    value: function paintNetIcons() {
+      var _this = this;
+
+      this._networkingIcons.each(function (index, element) {
+        (0, _jquery2.default)(element).toggleClass(_this.paintClass);
+      });
+    }
+  }, {
+    key: 'rotateMenu',
+    value: function rotateMenu() {
+      this._logoComponent.toggleClass(this.rotateClass);
+    }
   }]);
 
   return HeaderComponent;
@@ -97,7 +133,7 @@ var HeaderComponent = function () {
 exports.default = HeaderComponent;
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -116,7 +152,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 })();
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -157,4 +193,4 @@ var NavComponent = function () {
 exports.default = NavComponent;
 
 /***/ })
-],[4]);
+],[5]);
