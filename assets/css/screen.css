@@ -1393,6 +1393,16 @@ body {
   flex-wrap: nowrap;
   height: 3.75rem;
   padding: 0 1rem;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  -ms-transition-property: background-color;
+  transition-property: background-color;
   width: calc(100% - 2rem);
 }
 .sezzh-header--fixed {
@@ -1401,6 +1411,9 @@ body {
   right: 0;
   top: 0;
   z-index: 10;
+}
+.sezzh-header--solid {
+  background-color: #f2f2f2;
 }
 .sezzh-header__net-wrapper {
   -webkit-box-align: center;
@@ -1478,20 +1491,36 @@ body {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   font-family: 'acherus_grotesqueregular';
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
   padding: 0 1rem;
+  -webkit-transform: translate3d(0%, 0, 0);
+  -moz-transform: translate3d(0%, 0, 0);
+  -o-transform: translate3d(0%, 0, 0);
+  -ms-transform: translate3d(0%, 0, 0);
+  transform: translate3d(0%, 0, 0);
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -ms-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -o-transition-property: -o-transform, opacity;
+  -ms-transition-property: -ms-transform, opacity;
+  transition-property: transform, opacity;
   width: calc(100% - 2rem);
-  -webkit-transform: translate(0%);
-  -moz-transform: translate(0%);
-  -o-transform: translate(0%);
-  -ms-transform: translate(0%);
-  transform: translate(0%);
 }
 .sezzh-nav--closed {
-  -webkit-transform: translate(-100%);
-  -moz-transform: translate(-100%);
-  -o-transform: translate(-100%);
-  -ms-transform: translate(-100%);
-  transform: translate(-100%);
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -webkit-transform: translate3d(-100%, 0, 0);
+  -moz-transform: translate3d(-100%, 0, 0);
+  -o-transform: translate3d(-100%, 0, 0);
+  -ms-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
 }
 .sezzh-nav--fixed {
   bottom: 0;
@@ -1886,6 +1915,11 @@ body {
 }
 .u--font-primary-light-color {
   color: #88044c;
+}
+.u--a-opacity--off {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
 }
 .cb {
   background-color: #00f;

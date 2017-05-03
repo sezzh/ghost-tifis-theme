@@ -5,6 +5,8 @@
   flex-wrap: nowrap
   height: rem-calc($header-mobile-size)
   padding: 0 rem-calc(16)
+  transition-duration: .5s
+  transition-property: background-color
   width: calc(100% - 2rem)
   &--fixed
     left: 0
@@ -12,6 +14,8 @@
     right: 0
     top: 0
     z-index: 10
+  &--solid
+    background-color: $gray-242
   &__net-wrapper
     align-items: center
     display: flex
