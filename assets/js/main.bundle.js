@@ -145,10 +145,15 @@ var _siteComponent = __webpack_require__(1);
 
 var _siteComponent2 = _interopRequireDefault(_siteComponent);
 
+var _upBtn = __webpack_require__(16);
+
+var _upBtn2 = _interopRequireDefault(_upBtn);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
   (0, _siteComponent2.default)();
+  (0, _upBtn2.default)();
 })();
 
 /***/ }),
@@ -191,6 +196,46 @@ var NavComponent = function () {
 }();
 
 exports.default = NavComponent;
+
+/***/ }),
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function upBtn() {
+  var timeAnimation = 400;
+  var selector = (0, _jquery2.default)('[data-sezzh-comp="up-btn"]');
+  window.addEventListener('scroll', function (event) {
+    selector.addClass('sezzh-up-btn--visible');
+    if (window.scrollY === 0) {
+      selector.removeClass('sezzh-up-btn--visible');
+    }
+  });
+  selector.on('click', function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+    (0, _jquery2.default)('body').animate({ scrollTop: 0 }, timeAnimation);
+  });
+}
+
+module.exports = upBtn;
 
 /***/ })
 ],[5]);

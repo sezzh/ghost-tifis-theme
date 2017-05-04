@@ -38,3 +38,24 @@
     text-align: right
   &--newer
     text-align: left
+
+.sezzh-up-btn
+  border-radius: 50%
+  bottom: 0
+  display: block
+  height: rem-calc(44)
+  margin-bottom: .5rem
+  margin-right: .5rem
+  opacity: 0
+  position: fixed
+  right: 0
+  text-align: center
+  text-decoration: none
+  transition-duration: .5s
+  transition-property: opacity
+  width: rem-calc(44)
+  &--visible
+    opacity: .7
+  &__icon
+    color: $gray-188
+    font-size: rem-calc(44)
