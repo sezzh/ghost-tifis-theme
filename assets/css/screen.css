@@ -1562,6 +1562,7 @@ body {
   -ms-transition-property: -ms-transform, opacity;
   transition-property: transform, opacity;
   width: calc(100% - 2rem);
+  z-index: 10;
 }
 .sezzh-nav--closed {
   opacity: 0;
