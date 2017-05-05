@@ -22,3 +22,7 @@ projectFilesBackup
 
 # node
 node_modules/
+
+#jest
+coverage/**
+!coverage/

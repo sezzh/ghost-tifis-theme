@@ -1,0 +1,62 @@
+<div class="sf-grid__cell sf-grid__cell--col-12">
+  <div class="sezzh-author-detail">
+    {{#author}}
+    <div class="sezzh-author-detail__wrapper-bio">
+      <div class="sf-grid sf-grid--gutter sf-grid--items-center">
+        <div class="sf-grid__cell  sf-grid__cell--col-3-fluid  sf-offset-1">
+          <img class="sezzh-author-detail__wrapper-bio__img" src="{{image}}" alt="author's image">
+        </div>
+        <div class="sf-grid__cell  sf-grid__cell--col-7-fluid sf-offset-1-right">
+          <div class="sezzh-author-detail__wrapper-bio__bio">
+            <h1 class="sezzh-author-detail__wrapper-bio__bio__name">
+              {{name}}
+            </h1>
+            {{#if bio}}
+              <p class="sezzh-author-detail__wrapper-bio__bio__story">
+                {{bio}}
+              </p>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sezzh-author-detail__wrapper-details">
+      <div class="sf-grid sf-grid--gutter">
+        <div class="sf-grid__cell  sf-grid__cell--col-4-fluid">
+          <div class="sezzh-author-detail__wrapper-details__web">
+            {{#if website}}
+              <a href="{{website}}">
+                {{website}}
+              </a>
+            {{/if}}
+          </div>
+        </div>
+        <div class="sf-grid__cell  sf-grid__cell--col-4-fluid">
+          <div class="sezzh-author-detail__wrapper-details__location">
+            {{#if location}}{{location}}{{/if}}
+          </div>
+        </div>
+        <div class="sf-grid__cell  sf-grid__cell--col-4-fluid">
+          <div class="sezzh-author-detail__wrapper-details__post">
+            {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sezzh-author-detail__wrapper-network">
+      <div class="sf-grid sf-grid--gutter">
+        {{#if twitter}}
+        <div class="sf-grid__cell sf-grid__cell--col-auto">
+          <a class="sezzh-author-detail__wrapper-network__btn" href="#"><i class="icon-twitter"></i></a>
+        </div>
+        {{/if}}
+        {{#if facebook}}
+        <div class="sf-grid__cell sf-grid__cell--col-auto">
+          <a class="sezzh-author-detail__wrapper-network__btn" href="#"><i class="icon-facebook "></i></a>
+        </div>
+        {{/if}}
+      </div>
+    </div>
+    {{/author}}
+  </div>
+</div>

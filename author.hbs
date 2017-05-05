@@ -1,8 +1,15 @@
 {{!< default}}
+
 {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 
-{{!-- The main content area on the homepage --}}
 <main class="site-main  u--m-header" role="main">
+
+  <div class="u--m-bottom">
+    <div class="sf-grid sf-grid--gutter">
+      {{> "author-body"}}
+    </div>
+  </div>
+
   <div class="sf-grid sf-grid--gutter">
     {{> "loop"}}
   </div>
@@ -10,12 +17,5 @@
   <div class="sf-grid sf-grid--gutter sf-grid--fluid sf-grid--just-center u--m-bottom">
     {{pagination}}
   </div>
-
-<!--
-  <div class="">
-    {{@blog.description}}
-  </div>
--->
-  {{!-- The tag below includes the post loop - partials/loop.hbs --}}
 
 </main>

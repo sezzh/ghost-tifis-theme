@@ -4,14 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <title>{{meta_title}}</title>
-  <meta name="description" content="{{meta_descriptions}}">
+  <!-- <title>{{@blog.title}} - {{title}}</title> -->
+
+  <meta name="description" content="{{meta_description}}">
+  <meta name="designer" content="Jesús Cruz">
   <meta name="HandheldFriendly" content="True">
+
+  <!-- chrome tinted bar -->
+  <meta name="theme-color" content="#F2F2F2">
+
+  <link rel="shortcut icon"
+    href="{{asset "images/favicon.png"}}"
+    type="image/png">
+  <link rel="stylesheet" href="{{asset "css/vendor.css"}}">
+  <link rel="stylesheet" href="{{asset "css/screen.css"}}">
+  <link rel="stylesheet" href="{{asset "css/prism.css"}}">
+
   {{ghost_head}}
 </head>
-<body>
-  <div class="site-wrapper">
-    {{body}}
+<body class="{{body_class}}">
+  <div class="site-wrapper" data-sezzh-comp="site">
+    {{> "header" }}
+    {{navigation}}
+    {{{body}}}
+    {{!> "footer" }}
+    {{ghost_footer}}
+    {{> "up-btn"}}
   </div>
+  <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
+  <script type="text/javascript" src="{{asset "js/manifest.bundle.js"}}">
+  </script>
+  <script type="text/javascript" src="{{asset "js/vendor.bundle.js"}}">
+  </script>
+  <script type="text/javascript" src="{{asset "js/main.bundle.js"}}">
+  </script>
 </body>
 </html>

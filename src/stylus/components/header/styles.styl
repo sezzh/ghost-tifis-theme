@@ -1,0 +1,28 @@
+.sezzh-header
+  align-items: stretch
+  background-color: rgba(242, 242, 242, .8) // $gray-242
+  display: flex
+  flex-wrap: nowrap
+  height: rem-calc($header-mobile-size)
+  padding: 0 rem-calc(16)
+  transition-duration: .5s
+  transition-property: background-color
+  width: calc(100% - 2rem)
+  &--fixed
+    left: 0
+    position: fixed
+    right: 0
+    top: 0
+    z-index: 10
+  &--solid
+    background-color: $gray-242
+  &__net-wrapper
+    align-items: center
+    display: flex
+    height: 100%
+    margin-left: rem-calc(68)
+    width: 100%
+    @media only screen and (min-width: rem-calc($bp-xs-size))
+      margin-left: rem-calc(88)
+  @media only screen and (min-width: rem-calc($bp-xs-size))
+    height: rem-calc($header-desktop-size)

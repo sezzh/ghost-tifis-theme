@@ -1,0 +1,75 @@
+{{!< default}}
+<!--
+{{! The comment above "< default" means - insert everything in this file into
+the {{{body}}} of the default.hbs template, containing the blog header/footer.}}
+-->
+
+<main class="site-main u--m-header">
+  {{!-- Everything inside the #post tags pulls data from the post --}}
+  {{#post}}
+
+  <div class="sf-grid sf-grid--gutter">
+    <div class="sf-grid__cell sf-grid__cell--col-8 sf-offset-2 sf-offset-2-right">
+      <section class="sezzh-post">
+        <div class="post-title  sezzh-post__wrapper-title">
+          <h1 class="sezzh-post__wrapper-title__title">
+            <a
+              class="
+                sezzh-post__wrapper-title__title__link"
+              href="{{url}}">
+              {{title}}
+            </a>
+          </h1>
+        </div>
+        <div class="sezzh-post__wrapper-metrics">
+          <time class="sezzh-post__wrapper-metrics__date" datetime="{{date format="MM-DD-YYYY"}}">{{date format="MMM DD, YYYY"}}</time>
+          <span class="sezzh-post__wrapper-metrics__tags">{{tags}}</span>
+        </div>
+        <article class="sezzh-post__article" role="main">
+          {{content}}
+        </article>
+        <div class="sezzh-post__author">
+          <h4 class="sezzh-post__author__title">
+            {{author}}
+          </h4>
+        </div>
+        <div class="sezzh-post__share">
+          <h4 class="sezzh-post__share__title">
+            Comparte este articulo con tus amigos :)
+          </h4>
+          <a
+            class="sezzh-post__share__btn"
+            href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <i class="icon-facebook"></i>
+          </a>
+          <a
+            class="sezzh-post__share__btn"
+            href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
+            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <i class="icon-twitter"></i>
+          </a>
+        </div>
+        <div class="sezzh-post__nav">
+          <div class="sf-grid sf-grid--gutter sf-grid--just-center">
+            <div class="sf-grid__cell sf-grid__cell--col-6">
+              {{#next_post}}
+              <a class="sezzh-post__nav__next" href="{{url}}">
+                <h5>&#10094;  {{title}}</h5>
+              </a>
+              {{/next_post}}
+            </div>
+            <div class="sf-grid__cell sf-grid__cell--col-6">
+              {{#prev_post}}
+              <a class="sezzh-post__nav__preview" href="{{url}}">
+                <h5>{{title}}  &#10095;</h5>
+              </a>
+              {{/prev_post}}
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  {{/post}}
+</main>
