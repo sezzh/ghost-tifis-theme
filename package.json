@@ -1,6 +1,36 @@
 {
   "name": "tifis",
-  "version": "0.1.0",
+  "version": "0.5.0",
   "author": "sezzh",
-  "description": "Tifis theme inspired by some delightful and minimal themes."
+  "description": "Tifis theme inspired by some delightful and minimal themes.",
+  "scripts": {
+    "build-stylus-prod": "stylus -c -u nib ./src/stylus/styles.styl -o ./assets/css/screen.css",
+    "build-stylus-dev": "stylus -u nib -w ./src/stylus/styles.styl -o ./assets/css/screen.css",
+    "build-js": "node ./webpack.config.js",
+    "test": "jest --coverage"
+  },
+  "devDependencies": {
+    "animate.css": "^3.5.2",
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.24.1",
+    "babel-jest": "^19.0.0",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2016": "^6.24.1",
+    "babel-preset-es2017": "^6.24.1",
+    "css-loader": "^0.28.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "jest": "^19.0.2",
+    "jquery": "^3.2.1",
+    "nib": "^1.1.2",
+    "regenerator-runtime": "^0.10.5",
+    "sf-grid": "^1.0.2",
+    "standard": "^10.0.2",
+    "style-loader": "^0.16.1",
+    "stylint": "^1.5.9",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "webpack": "^2.4.1"
+  }
 }

@@ -1,0 +1,15 @@
+
+// Helper mixin to caculate rem size based of the $font-html-base-size variable
+rem-calc(value)
+  $u = unit(value)
+  if ($u is 'rem')
+    return unit(value, $u)
+  else
+    return unit(value / $font-html-base-size, 'rem')
+
+// Helper mixin for paint links based of the color schema of grays.
+gray-link()
+  a
+    color: $gray-128
+    &:visited
+      color: $gray-153

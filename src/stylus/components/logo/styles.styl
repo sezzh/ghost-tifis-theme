@@ -1,0 +1,21 @@
+@import './font.styl'
+
+.sezzh-logo
+  align-items: center
+  display: flex
+  text-decoration: none
+  width: rem-calc(44)
+  @media only screen and (min-width: rem-calc($bp-xs-size))
+    width: rem-calc(64)
+  &__img
+    color: $gray-51
+    font-size: rem-calc(44)
+    max-width: 100%
+    transition-duration: .5s
+    transition-property: transform, color
+    @media only screen and (min-width: rem-calc(440))
+      font-size: rem-calc(64)
+  &__wrapper
+    left: rem-calc(8)
+    position: fixed
+    top: rem-calc(8)

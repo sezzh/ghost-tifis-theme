@@ -1,0 +1,21 @@
+{{!-- This is the post loop - each post will be output using this markup --}}
+{{!-- Post detail on the list --}}
+{{#foreach posts}}
+<div class="sf-grid__cell  sf-grid__cell--col-6-fluid  sf-offset-3 sf-offset-3-right">
+  <a class="sezzh-post-item" href="{{url}}">
+    <h2 class="sezzh-post-item__title">
+      {{title}}
+    </h2>
+    <div class="post-excerpt  sezzh-post-item__wrapper">
+      <p class="sezzh-post-item__wrapper__content">
+        {{excerpt characters="140"}}...
+      </p>
+      <time
+        class="small sezzh-post-item__wrapper__date"
+        datetime="{{date format="MM-DD-YYYY"}}">
+        {{date format="MMM DD YYYY"}}
+      </time>
+    </div>
+  </a>
+</div>
+{{/foreach}}

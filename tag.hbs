@@ -1,0 +1,36 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+<main class="site-main u--m-header" role="main">
+
+  <div class="sf-grid sf-grid--gutter">
+    <div class="sf-grid__cell sf-grid__cell--col-12">
+      <div class="sezzh-tag-details">
+        {{#tag}}
+        <h1 class="sezzh-tag-details__title">
+          {{name}}
+        </h1>
+        <p class="sezzh-tag-details__description">
+          {{#if description}}
+            {{description}}
+          {{else}}
+            {{../pagination.total}} posts
+          {{/if}}
+        </p>
+        {{/tag}}
+      </div>
+    </div>
+  </div>
+
+  <div class="sf-grid sf-grid--gutter">
+    {{!-- The main content area on the homepage --}}
+    {{!-- The tag below includes the post loop - partials/loop.hbs --}}
+    {{> "loop"}}
+  </div>
+
+  {{!-- Previous/next page links - displayed on every page --}}
+  <div class="sf-grid sf-grid--gutter sf-grid--fluid sf-grid--just-center u--m-bottom">
+    {{pagination}}
+  </div>
+
+</main>
