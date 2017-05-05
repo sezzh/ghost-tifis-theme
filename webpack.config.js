@@ -1,3 +1,7 @@
+/**
+ * @fileoverview webpack's configuration file for bundleling fornt-end stuff.
+ */
+ 
 const path = require('path')
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')

@@ -1,3 +1,7 @@
+/**
+ * @fileoverview Jest UI test for navigation behavior! :D
+ */
+
 const $ = require('jquery')
 const SiteComponent = require('../src/js/site-component')
 

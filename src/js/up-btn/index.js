@@ -1,5 +1,8 @@
 import $ from 'jquery'
 
+/**
+ * Initializes and controls the behavior of the up button.
+ */
 function upBtn () {
   let timeAnimation = 400
   let selector = $('[data-sezzh-comp="up-btn"]')
